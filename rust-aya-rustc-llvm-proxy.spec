@@ -21,6 +21,8 @@ Dynamically proxy LLVM calls into Rust own shared library.}
 %description %{_description}
 
 %package        devel
+
+Requires: rust-libc-devel
 Summary:        %{summary}
 BuildArch:      noarch
 
