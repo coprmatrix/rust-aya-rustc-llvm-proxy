@@ -2,4 +2,8 @@
   <service name="rust2rpm" mode="manual">
     <param name="pkgid">aya-rustc-llvm-proxy</param>
   </service>
+  <service name="perl_regex" mode="manual">
+    <param name="file">rust-aya-rustc-llvm-proxy.spec</param>
+    <param name="regex">s/%cargo_test//g;</param>
+  </service>
 </services>
