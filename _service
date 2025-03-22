@@ -4,6 +4,11 @@
   </service>
   <service name="perl_regex" mode="manual">
     <param name="file">rust-aya-rustc-llvm-proxy.spec</param>
-    <param name="regex">s/%cargo_test//g;</param>
+    <param name="regex">
+if ($. == 1){
+  $_ = "\n$_\nBuildRequires: rust-libc\n";
+}
+s/%cargo_test//g;
+    </param>
   </service>
 </services>
